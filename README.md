@@ -5,3 +5,7 @@ Official GitHub Pages hub for NightstandPlus public projects, Chrome extension r
 Live site:
 
 https://nightstandplus.github.io/
+
+Published Chrome extension:
+
+https://chromewebstore.google.com/detail/nightstandplus-b2b-produc/memjliblkbachacpjknbihejpjbimkna
