@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NightstandPlus GitHub Projects</title>
+    <meta
+      name="description"
+      content="Official GitHub Pages hub for NightstandPlus Chrome extensions, B2B nightstand sourcing demos, bedside table OEM resources and public project releases."
+    >
+    <link rel="canonical" href="https://nightstandplus.github.io/">
+    <style>
+      :root {
+        --ink: #1f2523;
+        --muted: #68716d;
+        --line: #ded8ce;
+        --soft: #f6f2ec;
+        --brand: #2f5e55;
+        --brand-dark: #1f403a;
+        --accent: #9a6a2f;
+        --panel: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--panel);
+        line-height: 1.55;
+      }
+
+      a {
+        color: var(--brand-dark);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .nav {
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.96);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .nav-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 16px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 760;
+      }
+
+      .brand img {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+      }
+
+      .links {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        font-size: 14px;
+      }
+
+      .hero {
+        background: linear-gradient(180deg, #f7f2ea 0%, #ffffff 82%);
+      }
+
+      .hero-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 72px 22px 56px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(360px, 500px);
+        gap: 44px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 760;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 760px;
+        font-size: clamp(38px, 6vw, 66px);
+        line-height: 1.04;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        margin: 22px 0 0;
+        max-width: 720px;
+        color: var(--muted);
+        font-size: 19px;
+      }
+
+      .hero-card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 22px 64px rgba(47, 94, 85, 0.14);
+      }
+
+      .hero-card img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .section {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 50px 22px;
+      }
+
+      .section h2 {
+        margin: 0 0 18px;
+        font-size: 28px;
+        letter-spacing: 0;
+      }
+
+      .project {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 24px;
+        background: #fff;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .project h3 {
+        margin: 0 0 8px;
+        font-size: 22px;
+      }
+
+      .project p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .meta {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 14px;
+      }
+
+      .tag {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 4px 10px;
+        color: var(--muted);
+        font-size: 13px;
+        background: var(--soft);
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .button {
+        min-height: 42px;
+        padding: 9px 14px;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 720;
+        background: #fff;
+      }
+
+      .button.primary {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 20px;
+        background: #fff;
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .footer {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 26px 22px;
+        display: flex;
+        gap: 14px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 860px) {
+        .hero-inner,
+        .project,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-inner {
+          padding-top: 46px;
+        }
+
+        .nav-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .actions {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="https://www.nightstandplus.com/">
+          <img src="assets/icon-128.png" alt="NightstandPlus logo">
+          <span>NightstandPlus</span>
+        </a>
+        <nav class="links" aria-label="Primary navigation">
+          <a href="https://www.nightstandplus.com/">Official Website</a>
+          <a href="https://www.nightstandplus.com/products/">Products</a>
+          <a href="https://www.nightstandplus.com/oem-odm/">OEM/ODM</a>
+          <a href="https://github.com/nightstandplus">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div>
+            <p class="eyebrow">Open source and B2B furniture sourcing demos</p>
+            <h1>NightstandPlus GitHub Projects</h1>
+            <p class="lead">
+              Official project hub for NightstandPlus public tools, Chrome extension releases and B2B nightstand, bedside table and OEM/ODM furniture sourcing workflows.
+            </p>
+          </div>
+          <figure class="hero-card">
+            <img src="assets/nightstandplus-product-search.png" alt="NightstandPlus B2B Product Finder search screen">
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Projects</h2>
+        <article class="project">
+          <div>
+            <h3>NightstandPlus B2B Product Finder</h3>
+            <p>
+              Chrome extension for nightstand, bedside table and bedside cabinet OEM/wholesale product discovery, buyer comparison, local favorites, CSV/JSON export and RFQ inquiry preparation.
+            </p>
+            <div class="meta" aria-label="Project tags">
+              <span class="tag">v1.0.0</span>
+              <span class="tag">Chrome Extension</span>
+              <span class="tag">Nightstand OEM</span>
+              <span class="tag">Bedside Table</span>
+              <span class="tag">B2B Sourcing</span>
+            </div>
+          </div>
+          <div class="actions">
+            <a class="button primary" href="https://nightstandplus.github.io/nightstandplus-b2b-product-finder/">Demo Page</a>
+            <a class="button" href="https://github.com/nightstandplus/nightstandplus-b2b-product-finder">Source Code</a>
+            <a class="button" href="https://github.com/nightstandplus/nightstandplus-b2b-product-finder/releases/tag/v1.0.0">Release v1.0.0</a>
+            <a class="button" href="https://www.nightstandplus.com/chrome-extension-privacy/">Privacy Policy</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>NightstandPlus Resources</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Official Products</h3>
+            <p>Browse NightstandPlus nightstand, bedside table, bedside cabinet and smart nightstand product categories.</p>
+          </article>
+          <article class="card">
+            <h3>OEM/ODM Cooperation</h3>
+            <p>Review custom nightstand manufacturing, wholesale supply and private label furniture cooperation information.</p>
+          </article>
+          <article class="card">
+            <h3>B2B Inquiries</h3>
+            <p>Use the official contact route for RFQs, hotel projects, importer sourcing and distributor communication.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>© NightstandPlus. Public project hub.</span>
+        <span>
+          <a href="https://www.nightstandplus.com/contact/">Contact</a> ·
+          <a href="https://www.nightstandplus.com/chrome-extension-privacy/">Chrome Extension Privacy</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
